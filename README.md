@@ -3,6 +3,8 @@ This is an official documentation for [Dansebox](https://antikore.itch.io/danseb
 
 You're free to ask anything at Dansebox's official Discord Server.
 
+**Note:** _This documentation is currently a stub, and it's still building. Modding API hasn't been released yet. There are many things not implemented, or implemented but not added here. Use this as a reference for future releases of the game._
+
 ## Example mod
 This is a very basic example mod you can use to try out the api:
 ```lua
