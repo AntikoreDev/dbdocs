@@ -31,12 +31,117 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/color/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/config/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://antikoredev.github.io/dbdocs/reference/console/</loc>
          <lastmod>2022-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/draw/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/editor/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/font/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/game/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://antikoredev.github.io/dbdocs/reference/instance/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/level/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/locale/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/mathf/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/menu/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/mod/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/network/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/particles/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/player/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/reflections/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/replay/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/resources/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/save/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/sfx/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/string/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://antikoredev.github.io/dbdocs/reference/view/</loc>
          <lastmod>2022-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
