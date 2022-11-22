@@ -4,7 +4,7 @@ This is an official documentation for Dansebox's modding API created using [MkDo
 ## Example mod
 This is a very basic example mod you can use to try out the api.
 ```lua
---[[1
+--[[
 A simple mod that restarts a level if the player gets hit!
 --]]
 
