@@ -72,6 +72,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../game/">Game</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../input/">Input</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../instance/">Instance</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../level/">Level</a>
@@ -97,6 +99,10 @@
                   <li class="toctree-l1"><a class="reference internal" href="../resources/">Resources</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">SFX</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#play">play</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../save/">Save</a>
                   </li>
@@ -135,7 +141,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="sfx-module">SFX Module</h1>
+<p>This module handles audio playing.</p>
+<h2 id="play">play</h2>
+<p>You can play sounds through this method. You can use custom sounds by passing the output of <code>resource.load();</code> of a sound file to the SoundID.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">sfx.play(SoundID sound, Number volume = 1, Number pitch = 1, Boolean loops = false, Integer priority = 10, Number offset = 0);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">nil
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onPlayerCollide(instance)
+    sfx.play(sound.shout);
+end
+</code></pre>
+<p>This will play a shouting sound when colliding with other object.</p>
               
             </div>
           </div><footer>

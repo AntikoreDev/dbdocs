@@ -72,6 +72,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../game/">Game</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../input/">Input</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../instance/">Instance</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../level/">Level</a>
@@ -91,6 +93,10 @@
                   <li class="toctree-l1"><a class="reference internal" href="../player/">Player</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Reflections</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#bool">bool</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../replay/">Replay</a>
                   </li>
@@ -135,7 +141,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="reflections-module">Reflections Module</h1>
+<p>Reflections module is the most complex module in the API, it allows to modify game's internal stuff, like changing variables to objects directly, or stuff like that. Note that for security reasons, you must run <code>reflections.enable();</code> at <code>onLoad</code> event to let the rest functions work. This will create an advice for the user about the modulee being used.</p>
+<h2 id="bool">bool</h2>
+<p>Returns a boolean wether the input value is a truthy or falsy GameMaker value.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">reflections.bool(Any value);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">boolean
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-txt">No example defined.
+</code></pre>
               
             </div>
           </div><footer>

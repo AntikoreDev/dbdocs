@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Antikore" /><link rel="canonical" href="https://antikoredev.github.io/dbdocs/reference/config/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Antikore" /><link rel="canonical" href="https://antikoredev.github.io/dbdocs/reference/input/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Config - Dansebox Modding API Documentation</title>
+    <title>Input - Dansebox Modding API Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Config";
-        var mkdocs_page_input_path = "reference\\config.md";
-        var mkdocs_page_url = "/dbdocs/reference/config/";
+        var mkdocs_page_name = "Input";
+        var mkdocs_page_input_path = "reference\\input.md";
+        var mkdocs_page_url = "/dbdocs/reference/input/";
       </script>
     
     <script src="../../js/jquery-3.6.0.min.js" defer></script>
@@ -60,9 +60,7 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../color/">Color</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Config</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Config</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../console/">Console</a>
                   </li>
@@ -74,7 +72,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../game/">Game</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../input/">Input</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Input</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#press">press</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#down">down</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release">release</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key">key</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../instance/">Instance</a>
                   </li>
@@ -129,9 +137,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Module Reference &raquo;</li>
-      <li>Config</li>
+      <li>Input</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/antikoredev/dbdocs/edit/master/docs/reference/config.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/antikoredev/dbdocs/edit/master/docs/reference/input.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -139,14 +147,76 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="config-module">Config Module</h1>
-<p>This module should work with configuration and settings. You should be able to create your own settings, as well as modifying default ones.</p>
+                <h1 id="input-module">Input Module</h1>
+<p>Allows to check for buttons during the game.</p>
+<h2 id="press">press</h2>
+<p>Check if a key has been pressed. You can use <code>input.key()</code> to get key values for special keys, such as <code>DEL</code> for the delete button, or <code>SPACE</code> for the space button. You can use freely a one-letter long string to check for a letter key directly in this function too.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">input.press(String or Integer key);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">boolean
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onUpdate()
+    if (input.press(&quot;Z&quot;)) then
+        console.log(&quot;You pressed the letter Z!&quot;);
+    end
+    if (input.press(input.key(&quot;SPACE&quot;))) then
+        console.log(&quot;You pressed the spacebar&quot;);
+    end
+end
+</code></pre>
+<p>This will show you a message if you press the Z key, or the spacebar.</p>
+<h2 id="down">down</h2>
+<p>Check if a key has being held. For everything else works exactly the same than <code>input.press();</code></p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">input.down(String or Integer key);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">boolean
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">moving = 0;
+key_left = input.key(&quot;LEFT&quot;);
+key_right = input.key(&quot;RIGHT&quot;);
+
+function onUpdate()
+    if (not game.inplay()) then return end
+    if (input.down(key_left) or input.down(key_right)) then
+        moving = moving + 1;
+    end
+end
+</code></pre>
+<p>This will count every frame you were moving</p>
+<h2 id="release">release</h2>
+<p>Check if a key has being released. For everything else works exactly the same than <code>input.press();</code></p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">input.release(String or Integer key);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">boolean
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-txt">No example defined
+</code></pre>
+<h2 id="key">key</h2>
+<p>Returns the numerical ID of a key. The first argument should be a letter or a string that refers to a key. </p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">input.key(String key);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">integer
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-txt">No example defined
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../color/" class="btn btn-neutral float-left" title="Color"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../console/" class="btn btn-neutral float-right" title="Console">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../game/" class="btn btn-neutral float-left" title="Game"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../instance/" class="btn btn-neutral float-right" title="Instance">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -173,10 +243,10 @@
         </span>
     
     
-      <span><a href="../color/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../game/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../console/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../instance/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
