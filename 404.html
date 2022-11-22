@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Antikore" />
+      <link rel="shortcut icon" href="/dbdocs/img/favicon.ico" />
+    <title>Dansebox Modding API Documentation</title>
+    <link rel="stylesheet" href="/dbdocs/css/theme.css" />
+    <link rel="stylesheet" href="/dbdocs/css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+    <script src="/dbdocs/js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="/dbdocs/js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="/dbdocs/." class="icon icon-home"> Dansebox Modding API Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="/dbdocs//search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="/dbdocs/.">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/dbdocs/home/lua/">Lua</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="/dbdocs/getting_started/start/">Creating Project Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/dbdocs/getting_started/events/">Event Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/dbdocs/getting_started/finish/">Distribution</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Module Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/color.md">Color</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/config.md">Config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/dbdocs/reference/console/">Console</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/draw.md">Draw</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/editor.md">Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/font.md">Font</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/game.md">Game</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/dbdocs/reference/instance/">Instance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/level.md">Level</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/locale.md">Locale</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/mathf.md">Mathf</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/menu.md">Menu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/mod.md">Mod</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/network.md">Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/particle.md">Particle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/player.md">Player</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/reflections.md">Reflections</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/replay.md">Replay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/resources.md">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/sfx.md">SFX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/save.md">Save</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/string.md">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="/dbdocs/reference/view.md">View</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="/dbdocs/extra/praxis/">Good Practices</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="/dbdocs/.">Dansebox Modding API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="/dbdocs/." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+
+  <h1 id="404-page-not-found">404</h1>
+
+  <p><strong>Page not found</strong></p>
+
+
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/antikoredev/dbdocs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '/dbdocs/';</script>
+    <script src="/dbdocs/js/theme_extra.js" defer></script>
+    <script src="/dbdocs/js/theme.js" defer></script>
+      <script src="/dbdocs/search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

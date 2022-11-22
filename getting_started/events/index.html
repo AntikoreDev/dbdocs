@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Antikore" /><link rel="canonical" href="https://antikoredev.github.io/dbdocs/getting_started/events/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Event Reference - Dansebox Modding API Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Event Reference";
+        var mkdocs_page_input_path = "getting_started\\events.md";
+        var mkdocs_page_url = "/dbdocs/getting_started/events/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Dansebox Modding API Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../home/lua/">Lua</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../start/">Creating Project Files</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Event Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#onload">onLoad</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onunload">onUnload</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onupdate">onUpdate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onlevelobjectupdate">onLevelObjectUpdate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oneditorobjectupdate">onEditorObjectUpdate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onplayercollide">onPlayerCollide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onlevelload">onLevelLoad</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onlevelprepared">onLevelPrepared</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onlevelstarted">onLevelStarted</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onlevelcomplete">onLevelComplete</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onnetworkpacketreceive">onNetworkPacketReceive</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oneditorload">onEditorLoad</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oneditorsave">onEditorSave</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oneditorobjectplace">onEditorObjectPlace</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oneditorobjecterase">onEditorObjectErase</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../finish/">Distribution</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Module Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../../reference/color.md">Color</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/config.md">Config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/console/">Console</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/draw.md">Draw</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/editor.md">Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/font.md">Font</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/game.md">Game</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/instance/">Instance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/level.md">Level</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/locale.md">Locale</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/mathf.md">Mathf</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/menu.md">Menu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/mod.md">Mod</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/network.md">Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/particle.md">Particle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/player.md">Player</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/reflections.md">Reflections</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/replay.md">Replay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/resources.md">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/sfx.md">SFX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/save.md">Save</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/string.md">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../reference/view.md">View</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extra</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../extra/praxis/">Good Practices</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Dansebox Modding API Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Getting Started &raquo;</li>
+      <li>Event Reference</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/antikoredev/dbdocs/edit/master/docs/getting_started/events.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="events">Events</h1>
+<p>This is a reference of every event that Dansebox runs on your mod's <code>main.lua</code> file.<br>
+For sake of simplicity, take in account that Dansebox shouldn't run any event on your mod if its disabled<br>
+Note that you don't have to include any of these events for your mod to work, instead, just add those you actually need.</p>
+<h2 id="onload">onLoad</h2>
+<p>This runs once the mod is enabled by the user, or when the game starts while the mod is enabled.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onLoad()
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onLoad()
+    console.log(&quot;Enabled my incredible mod! Thanks :D&quot;);
+end
+</code></pre>
+<p>This will show a log message when the mod is enabled :)</p>
+<h2 id="onunload">onUnload</h2>
+<p>This runs once the mod is disabled by the user, or when the game ends while the mod is enabled.
+<strong>Syntax:</strong></p>
+<pre><code class="language-lua">onUnload()
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onLoad()
+    resources.free();
+end
+</code></pre>
+<p>This will free up resources added by the mod (This is a good practice actually!)</p>
+<h2 id="onupdate">onUpdate</h2>
+<p>This will run every frame, this is useful when you want to check for buttons to do different actions. Note that this runs anywhere you are, including splash screens, editor, main menus, first load, etc. so you may (or may not) want to check where you are before doing an action.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onUpdate()
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onUpdate()
+    if (not game.islevel()) then return end
+    if (game.hit()) then game.restart(); end
+end
+</code></pre>
+<p>This will restart the level, when the player is hit, only if the player is in a level.</p>
+<h2 id="onlevelobjectupdate">onLevelObjectUpdate</h2>
+<p>This will run every frame for every object that is currently active in the level, while playing. This works both if you're on a replay or if you're in a level.
+The first parameter is an instance id you can use to manipulate the instance through the <a href="../../reference/instance/">instance</a> module</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onLevelObjectUpdate(InstanceID instance)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onLevelObjectUpdate(instance)
+    if (instance.id(instance) == &quot;mymod:superblock&quot;) then
+        draw.sprite(sprite.superblock, instance.x(instance), instance.y(instance), instance.depth(instance));
+    end
+end
+</code></pre>
+<p>This draws the superblock sprite if the instance id is <code>mymod:superblock</code></p>
+<h2 id="oneditorobjectupdate">onEditorObjectUpdate</h2>
+<p>This will run every frame for every object that is currently active in the level editor.
+The first parameter is an instance id you can use to manipulate the instance through the <a href="../modules/instance.md">instance</a> module</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onEditorObjectUpdate(InstanceID instance)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onEditorObjectUpdate(instance)
+    if (instance.id(instance) == &quot;mymod:superblock&quot;) then
+        draw.sprite(sprite.superblock, instance.x(instance), instance.y(instance), instance.depth(instance));
+    end
+end
+</code></pre>
+<p>This draws the superblock sprite if the instance id is <code>mymod:superblock</code></p>
+<h2 id="onplayercollide">onPlayerCollide</h2>
+<p>This will run every frame the player collides with something, for each instance colliding.
+The first parameter is an instance id you can use to manipulate the instance through the <a href="../modules/instance.md">instance</a> module</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onPlayerCollide(InstanceID instance)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onPlayerCollide(instance)
+    if (instance.id(instance) == &quot;gunfires:ammo&quot;) then
+        instance.destroy(instance);
+        ammo = ammo + 10;
+    end
+end
+</code></pre>
+<p>This will detect when the player collides with the object with id <code>gunfires:ammo</code>, if it does, it destroys it and adds 10 to the <code>ammo</code> variable.</p>
+<h2 id="onlevelload">onLevelLoad</h2>
+<p>This will run when a level is loaded. Works both for replays and levels.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onLevelLoad()
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onLevelLoad()
+    attempts = 0;
+end
+</code></pre>
+<p>This will detect when the level is loaded, and set the variable <code>attempts</code> to 0</p>
+<h2 id="onlevelprepared">onLevelPrepared</h2>
+<p>This will run once the level is loaded, and after the level is restarted. Works both level and replays as well</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onLevelPrepared()
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onLevelPrepared()
+    attempts = attempts + 1;
+end
+</code></pre>
+<p>This will detect when the level is prepared, and add 1 to the vriable <code>attempts</code></p>
+<h2 id="onlevelstarted">onLevelStarted</h2>
+<p>This will run once the player has started the level, by pressing <code>left</code> or <code>right</code> (or any key that starts the level) the first time in a level after being loaded.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onLevelStarted()
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onLevelStarted()
+    console.log(&quot;Level &quot; .. level.name() .. &quot; started! Here we go!&quot;);
+end
+</code></pre>
+<p>This will send a debug message when you start a level, that includes the level name</p>
+<h2 id="onlevelcomplete">onLevelComplete</h2>
+<p>This will run once the player has completed a level.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onLevelComplete()
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onLevelComplete()
+    draw.hudtext(&quot;Congratulations!&quot;, view.width() / 2, view.height() - 16, -1000, color.white, font.main);
+end
+</code></pre>
+<p>This will congrat you by completing a level!</p>
+<h2 id="onnetworkpacketreceive">onNetworkPacketReceive</h2>
+<p>This will run when a packet is received during a multiplayer play. (This may not be implemented when you're reading this, so this event is probably, inexistent)</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onNetworkPacketReceive(Table packetData)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-txt">No example defined.
+</code></pre>
+<h2 id="oneditorload">onEditorLoad</h2>
+<p>This will run when the editor loads a level. Doesn't run if the editor is loaded plain empty. It gives you the filename of the level that has been loaded.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onEditorLoad(String filename)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onEditorLoad(filename)
+    local levelfile = level.fromfile(filename);
+    local name = level.name(levelfile);
+end
+</code></pre>
+<p>This will get the name of a level from it's file when it's loadaded.</p>
+<h2 id="oneditorsave">onEditorSave</h2>
+<p>This will run when the editor saves a level. It gives you the filename of the level that has been saved.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onEditorSave(String filename)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-txt">No example defined.
+</code></pre>
+<p>This will get the name of a level from it's file when it's loadaded.</p>
+<h2 id="oneditorobjectplace">onEditorObjectPlace</h2>
+<p>This will run everytime an object is created in the level editor. The first parameter corresponds to the instance of the new object</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onEditorObjectPlace(InstanceID instance)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onEditorObjectPlace(instance)
+    if (instance.id(instance) == &quot;mymod:singleton&quot;) then
+        if (instance.number(&quot;mymod:singleton&quot;) &gt; 1) then
+            instance.destroy(instance);
+        end
+    end
+end
+</code></pre>
+<p>This will only let the player place 1 object of <code>mymod:singleton</code></p>
+<h2 id="oneditorobjecterase">onEditorObjectErase</h2>
+<p>This will run everytime an object is erased in the level editor. The first parameter corresponds to the instance of the destroyec object</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onEditorObjectPlace(InstanceID instance)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-txt">No example defined.
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../start/" class="btn btn-neutral float-left" title="Creating Project Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../finish/" class="btn btn-neutral float-right" title="Distribution">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/antikoredev/dbdocs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../start/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../finish/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
