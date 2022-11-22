@@ -1,9 +1,13 @@
-# Dansebox Modding API Documentation
-This is an official documentation for [Dansebox](https://antikore.itch.io/dansebox)'s modding API created using [MkDocs](https://www.mkdocs.org/). This website is hosted through GitHub pages and you can check it at https://antikoredev.github.io/dbdocs/
+# Overview
+This is an official documentation for [Dansebox](https://antikore.itch.io/dansebox)'s modding API created using [MkDocs](https://www.mkdocs.org/). This website is hosted through GitHub pages and you can check it at [https://antikoredev.github.io/dbdocs/](https://antikoredev.github.io/dbdocs/)
 
 You're free to ask anything at Dansebox's official [Discord Server](https://discord.gg/GkysgwR8vG).
 
 **Note:** _This documentation is currently a stub, and it's still building. Modding API hasn't been released yet. There are many things not implemented, or implemented but not added here. Use this as a reference for future releases of the game._
+
+## Getting Started
+
+Dansebox uses [Lua](./home/lua.md) as a programming language to support mods. You can start learning how to create your own mods at [Getting Started](./getting_started/start.md) page
 
 ## Example mod
 This is a very basic example mod you can use to try out the api:

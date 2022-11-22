@@ -4,5 +4,38 @@ repo_url: https://github.com/antikoredev/dbdocs
 site_description: This is an official documentation for Dansebox's modding API created using MkDocs
 site_author: Antikore
 nav:
-  - Home: home.md
+  - Home:
+    - Overview: index.md
+    # - About: reference/about.md
+    - Lua: home/lua.md
+  - Getting Started:
+    - 'Creating Project Files': getting_started/start.md
+    - Event Reference: getting_started/events.md
+    - Distribution: getting_started/finish.md
+  - Module Reference:
+    - Color: reference/color.md
+    - Config: reference/config.md
+    - Console: reference/console.md
+    - Draw: reference/draw.md
+    - Editor: reference/editor.md
+    - Font: reference/font.md
+    - Game: reference/game.md
+    - Instance: reference/instance.md
+    - Level: reference/level.md
+    - Locale: reference/locale.md
+    - Mathf: reference/mathf.md
+    - Menu: reference/menu.md
+    - Mod: reference/mod.md
+    - Network: reference/network.md
+    - Particle: reference/particle.md
+    - Player: reference/player.md
+    - Reflections: reference/reflections.md
+    - Replay: reference/replay.md
+    - Resources: reference/resources.md
+    - SFX: reference/sfx.md
+    - Save: reference/save.md
+    - String: reference/string.md
+    - View: reference/view.md
+  - Extra:
+    - Good Practices: extra/praxis.md
 theme: readthedocs
