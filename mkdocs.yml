@@ -20,6 +20,7 @@ nav:
     - Editor: reference/editor.md
     - Font: reference/font.md
     - Game: reference/game.md
+    - Input: reference/input.md
     - Instance: reference/instance.md
     - Level: reference/level.md
     - Locale: reference/locale.md
