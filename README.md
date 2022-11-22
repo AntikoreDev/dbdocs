@@ -1,6 +1,8 @@
 # Dansebox Modding API Documentation
 This is an official documentation for [Dansebox](https://antikore.itch.io/dansebox)'s modding API created using [MkDocs](https://www.mkdocs.org/). This website is hosted through GitHub pages and you can check it at https://antikoredev.github.io/dbdocs/
 
+You're free to ask anything at Dansebox's official Discord Server.
+
 ## Example mod
 This is a very basic example mod you can use to try out the api:
 ```lua
