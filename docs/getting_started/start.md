@@ -35,7 +35,7 @@ You may want to change the name, and description to fit your needs. The most imp
 
 ## Basic main.lua syntax
 This is where the fun part goes, you start your mod by starting your game. (If it doesn't, check if it's enabled through settings menu)
-When the mod starts, it runs automatically the [`onLoad`](./functions.md) function inside your mod 
+When the mod starts, it runs automatically the [`onLoad`](./events.md) function inside your mod 
 
 Here's a good example to start from
 ```lua

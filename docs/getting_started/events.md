@@ -72,7 +72,7 @@ This draws the superblock sprite if the instance id is `mymod:superblock`
 
 ## onEditorObjectUpdate
 This will run every frame for every object that is currently active in the level editor.
-The first parameter is an instance id you can use to manipulate the instance through the [instance](../modules/instance.md) module
+The first parameter is an instance id you can use to manipulate the instance through the [instance](../reference/instance.md) module
 
 **Syntax:**
 ```lua
@@ -91,7 +91,7 @@ This draws the superblock sprite if the instance id is `mymod:superblock`
 
 ## onPlayerCollide
 This will run every frame the player collides with something, for each instance colliding.
-The first parameter is an instance id you can use to manipulate the instance through the [instance](../modules/instance.md) module
+The first parameter is an instance id you can use to manipulate the instance through the [instance](../reference/instance.md) module
 
 **Syntax:**
 ```lua
