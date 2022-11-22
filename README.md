@@ -12,14 +12,17 @@ This is a very basic example mod you can use to try out the api:
 A simple mod that restarts a level if the player gets hit!
 --]]
 
+-- This runs when the mod has been enabled or when the game is opened while being enabled.
 function onLoad()
 	console.log("One-hit Mod Enabled");
 end
 
+-- This runs when the mod has been disabled or the game is closed while being enabled.
 function onUnload()
 	console.log("One-hit Mod Disabled");
 end
 
+-- This runs every frame the mod is enabled
 function onUpdate()
 	if (not game.islevel()) then return end
 	if (game.hit()) then game.restart(); end
