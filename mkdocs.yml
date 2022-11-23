@@ -1,6 +1,7 @@
 site_name: Dansebox Modding API Documentation
 site_url: https://antikoredev.github.io/dbdocs
 repo_url: https://github.com/antikoredev/dbdocs
+edit_uri: edit/main/docs/
 site_description: This is an official documentation for Dansebox's modding API created using MkDocs
 site_author: Antikore
 nav:
