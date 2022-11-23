@@ -1,3 +1,5 @@
+![Banner](./img/banner.png "Banner")
+
 # Overview
 This is an official documentation for [Dansebox](https://antikore.itch.io/dansebox)'s modding API created using [MkDocs](https://www.mkdocs.org/). This website is hosted through GitHub pages and you can check it at [https://antikoredev.github.io/dbdocs/](https://antikoredev.github.io/dbdocs/)
 
