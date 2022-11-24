@@ -13,7 +13,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Event Reference";
-        var mkdocs_page_input_path = "getting_started\\events.md";
+        var mkdocs_page_input_path = "getting_started/events.md";
         var mkdocs_page_url = "/dbdocs/getting_started/events/";
       </script>
     
@@ -83,7 +83,11 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#oneditorobjecterase">onEditorObjectErase</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#onmacro">onMacro</a>
+    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../console/">Console & Commands</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../finish/">Distribution</a>
                   </li>
@@ -346,12 +350,25 @@ end
 <p><strong>Example:</strong></p>
 <pre><code class="language-txt">No example defined.
 </code></pre>
+<h2 id="onmacro">onMacro</h2>
+<p>This will run when the player tried to run a macro through the console. First parameter is the ID passed through the command.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">onMacro(String name)
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onMacro(name)
+    if (name == &quot;mylives&quot;) then
+        console.log(&quot;You have &quot; + lives + &quot; lives!&quot;);
+    end
+end
+</code></pre>
+<p>This outputs a message that tells the player how many lives they have, when the command <code>macro mylives</code> is used.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../start/" class="btn btn-neutral float-left" title="Creating Project Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../finish/" class="btn btn-neutral float-right" title="Distribution">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../console/" class="btn btn-neutral float-right" title="Console & Commands">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -381,7 +398,7 @@ end
       <span><a href="../start/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../finish/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../console/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
