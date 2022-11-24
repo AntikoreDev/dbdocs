@@ -249,3 +249,21 @@ onEditorObjectPlace(InstanceID instance)
 ```txt
 No example defined.
 ```
+
+## onMacro
+This will run when the player tried to run a macro through the console. First parameter is the ID passed through the command.
+
+**Syntax:**
+```lua
+onMacro(String name)
+```
+
+**Example:**
+```lua
+function onMacro(name)
+	if (name == "mylives") then
+		console.log("You have " + lives + " lives!");
+	end
+end
+```
+This outputs a message that tells the player how many lives they have, when the command `macro mylives` is used.

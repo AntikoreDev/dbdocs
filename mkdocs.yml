@@ -11,7 +11,8 @@ nav:
     - Lua: home/lua.md
   - Getting Started:
     - 'Creating Project Files': getting_started/start.md
-    - Event Reference: getting_started/events.md
+    - 'Event Reference': getting_started/events.md
+    - 'Console & Commands': getting_started/console.md
     - Distribution: getting_started/finish.md
   - Module Reference:
     - Color: reference/color.md
