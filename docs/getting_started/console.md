@@ -8,14 +8,6 @@ To look at the console in-game, just press `F3` at any time.
 ## Console Commands
 Not only that, Dansebox also includes a few commands you can run during play to ease modding process.
 
-### restart
-This will restart the current level if playing one.
-
-**Syntax:**
-```bash
-restart
-```
-
 ### lua
 Runs a lua snippet of code. Note that every mod instance is separated from each other, and this will run outside any of these, so you can't access directly to variables from them.
 
@@ -33,11 +25,11 @@ playsfx <id>
 ```
 
 ### reload
-Unloads and loads every enabled mod at that point.
+Unloads and loads every mod or an specified mod. Take in account this command breaks everything so easily, and for so, using it on playing, replays, and level editor is disabled.
 
 **Syntax:**
 ```bash
-reload
+reload [modname]
 ```
 
 ### clear
@@ -65,7 +57,7 @@ luaadd <namespace> <code...>
 ```
 
 ### macro
-Runs a macro by ID. A mod can check when a macro is run, so you can create your own macros.
+Runs a macro by ID. A mod can check when a macro is run, so you can create your own macros. See [`onMacro`](./events.md#onMacro) for further information
 
 **Syntax:**
 ```bash
