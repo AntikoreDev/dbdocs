@@ -78,6 +78,18 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Instance</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#id">id</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#namespace">namespace</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#x">x</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#y">y</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#destroy">destroy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#move">move</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../level/">Level</a>
@@ -143,6 +155,98 @@
               
                 <h1 id="instance-module">Instance Module</h1>
 <p>The instance module allows the interaction with game objects, both level editor and ingame ones.</p>
+<h2 id="id">id</h2>
+<p>Returns the object id from an instance</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">instance.id(InstanceID inst);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">ObjectID
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onEditorObjectPlace(inst)
+    if (instance.id(inst) == &quot;coolitems:myitem&quot;) then
+        console.log(&quot;Wow, thanks for using my mod!!!!&quot;);
+    end
+end
+</code></pre>
+<p>This will check if the object placed is a <code>coolitems:myitem</code>, and if it does, thank the player for that.</p>
+<h2 id="namespace">namespace</h2>
+<p>Returns the namespace of an object</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">instance.namespace(InstanceID inst);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">String
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onEditorObjectPlace(inst)
+    if (instance.namespace(inst) != &quot;coolitems&quot;) then return end
+    -- do stuff
+end
+</code></pre>
+<p>This will exit the execution of the function if the object's namespace isn't <code>coolitems</code></p>
+<h2 id="x">x</h2>
+<p>Returns the x coordinate of an object.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">instance.x(InstanceID inst);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">Number
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onEditorObjectPlace(inst)
+    console.log(instance.x(inst) .. &quot;, &quot; .. instance.y(inst));
+end
+</code></pre>
+<p>This will log the position of an object when placed in the editor.</p>
+<h2 id="y">y</h2>
+<p>Returns the y coordinate of an object.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">instance.y(InstanceID inst);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">Number
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onEditorObjectPlace(inst)
+    console.log(instance.x(inst) .. &quot;, &quot; .. instance.y(inst));
+end
+</code></pre>
+<p>This will log the position of an object when placed in the editor.</p>
+<h2 id="destroy">destroy</h2>
+<p>This destroys an instance</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">instance.destroy(InstanceID inst);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">nil
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onEditorObjectPlace(inst)
+    if (levelNotMine) then
+        instance.destroy(inst);
+        console.log(&quot;This level is not yours!!!!&quot;);
+    end
+end
+</code></pre>
+<p>This will disable the player to place blocks in the edtitor if level is not theirs.</p>
+<h2 id="move">move</h2>
+<p>This moves an instance relatively</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">instance.destroy(InstanceID inst, Number x, Number y);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">nil
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onLevelObjectUpdate(inst)
+    if (instance.id(inst) == &quot;bullets:bullet&quot;) then
+        instance.move(0, -8);
+    end
+end
+</code></pre>
+<p>This will move bullets during the level, upwards by 8 pixel per frame.</p>
               
             </div>
           </div><footer>

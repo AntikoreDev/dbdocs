@@ -57,8 +57,6 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#console-commands">Console Commands</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#restart">restart</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#lua">lua</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#playsfx">playsfx</a>
@@ -167,11 +165,6 @@
 <p>To look at the console in-game, just press <code>F3</code> at any time.</p>
 <h2 id="console-commands">Console Commands</h2>
 <p>Not only that, Dansebox also includes a few commands you can run during play to ease modding process.</p>
-<h3 id="restart">restart</h3>
-<p>This will restart the current level if playing one.</p>
-<p><strong>Syntax:</strong></p>
-<pre><code class="language-bash">restart
-</code></pre>
 <h3 id="lua">lua</h3>
 <p>Runs a lua snippet of code. Note that every mod instance is separated from each other, and this will run outside any of these, so you can't access directly to variables from them.</p>
 <p><strong>Syntax:</strong></p>
@@ -183,9 +176,9 @@
 <pre><code class="language-bash">playsfx &lt;id&gt;
 </code></pre>
 <h3 id="reload">reload</h3>
-<p>Unloads and loads every enabled mod at that point.</p>
+<p>Unloads and loads every mod or an specified mod. Take in account this command breaks everything so easily, and for so, using it on playing, replays, and level editor is disabled.</p>
 <p><strong>Syntax:</strong></p>
-<pre><code class="language-bash">reload
+<pre><code class="language-bash">reload [modname]
 </code></pre>
 <h3 id="clear">clear</h3>
 <p>Clear the whole log, this doesn't affect the <code>latest.log</code> file</p>
@@ -203,7 +196,7 @@
 <pre><code class="language-bash">luaadd &lt;namespace&gt; &lt;code...&gt;
 </code></pre>
 <h3 id="macro">macro</h3>
-<p>Runs a macro by ID. A mod can check when a macro is run, so you can create your own macros.</p>
+<p>Runs a macro by ID. A mod can check when a macro is run, so you can create your own macros. See <a href="../events/#onMacro"><code>onMacro</code></a> for further information</p>
 <p><strong>Syntax:</strong></p>
 <pre><code class="language-bash">macro &lt;name&gt;
 </code></pre>

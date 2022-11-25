@@ -106,6 +106,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#free">free</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mask">mask</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sfx/">SFX</a>
@@ -150,8 +152,60 @@
                 <h1 id="resources-module">Resources Module</h1>
 <p>Allows handling resources, that means, you can load sprites, sounds, create new objects etc, through this module.</p>
 <h2 id="load">load</h2>
+<p>Loads sprites or sounds from a filename, the filename starts at content folder, so you can write <code>mysprite.png</code> and that would link to mysprite.png inside the content folder. Depending on the extension, Dansebox will get it as a sprite or as a sound.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">resources.load(String fname);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">AssetID
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">sprites = {
+    superblock = resources.load(&quot;superblock.png&quot;);
+};
+sounds = {
+    gunfire = resources.load(&quot;shoot.ogg&quot;);
+}
+</code></pre>
+<p>This code imports the shoot.ogg sound and the superblock.png sprite, and save them into tables for future reference.</p>
 <h2 id="add">add</h2>
+<p>This adds a new object to use in levels for example.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">resources.add(String objectIDWithNoNamespace, SpriteID sprite, SpriteID mask, String objectName, String objectCategory, Table properties = []);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">ObjectID
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">No example defined.
+</code></pre>
 <h2 id="free">free</h2>
+<p>This is used to free up memory from sprites, sounds, objects etc. This is recommended to use in the <code>onUnload</code> event.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">resources.free();
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">nil
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">function onUnload()
+    resources.free();
+end
+</code></pre>
+<h2 id="mask">mask</h2>
+<p>This is used to customize mask (collision box) for a sprite.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-lua">resources.mask(SpriteID sprite, Number left = 0, Number top = 0, Number right = 15, Number bottom = 15);
+</code></pre>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-lua">SpriteID
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-lua">sprites = {
+    coin = resources.mask(resources.load(&quot;coin.png&quot;), 7, 7, 9, 9);
+};
+</code></pre>
+<p>This adds a coin sprite with a very small mask</p>
               
             </div>
           </div><footer>
