@@ -8,14 +8,6 @@ To look at the console in-game, just press `F3` at any time.
 ## Console Commands
 Not only that, Dansebox also includes a few commands you can run during play to ease modding process.
 
-### restart
-This will restart the current level if playing one.
-
-**Syntax:**
-```bash
-restart
-```
-
 ### lua
 Runs a lua snippet of code. Note that every mod instance is separated from each other, and this will run outside any of these, so you can't access directly to variables from them.
 
@@ -70,4 +62,12 @@ Runs a macro by ID. A mod can check when a macro is run, so you can create your 
 **Syntax:**
 ```bash
 macro <name>
+```
+
+### maxhistorylog
+Changes the max log lines you can have. By default this is `256`. With this command you can change it from 32 to 65536. Passing a parameter out of range will be clamped. Not passing any parameters at all will set it to 256 again.
+
+**Syntax:**
+```bash
+maxhistorylog [amount]
 ```

@@ -1,5 +1,5 @@
 # Console Module
-Allows the interaction with console and logs.
+Allows the interaction with console and logging.
 
 ## log
 Output text to the console
