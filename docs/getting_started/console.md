@@ -25,11 +25,11 @@ playsfx <id>
 ```
 
 ### reload
-Unloads and loads every enabled mod at that point.
+Unloads and loads every mod or an specified mod. Take in account this command breaks everything so easily, and for so, using it on playing, replays, and level editor is disabled.
 
 **Syntax:**
 ```bash
-reload
+reload [modname]
 ```
 
 ### clear
@@ -57,7 +57,7 @@ luaadd <namespace> <code...>
 ```
 
 ### macro
-Runs a macro by ID. A mod can check when a macro is run, so you can create your own macros.
+Runs a macro by ID. A mod can check when a macro is run, so you can create your own macros. See [`onMacro`](./events.md#onMacro) for further information
 
 **Syntax:**
 ```bash
